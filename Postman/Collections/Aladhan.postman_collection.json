@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "d0371aee-50ac-42b3-9f94-a97155274954",
+		"name": "Aladhan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13067200"
+	},
+	"item": [
+		{
+			"name": "Get the prayer timings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.aladhan.com/v1/timingsByCity?city=Moscow&country=Russia&method=2",
+					"protocol": "http",
+					"host": [
+						"api",
+						"aladhan",
+						"com"
+					],
+					"path": [
+						"v1",
+						"timingsByCity"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Moscow"
+						},
+						{
+							"key": "country",
+							"value": "Russia"
+						},
+						{
+							"key": "method",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
