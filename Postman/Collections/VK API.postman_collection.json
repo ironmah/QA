@@ -1,0 +1,432 @@
+{
+	"info": {
+		"_postman_id": "19f1e7df-e770-4f86-9fb0-f2013ae6d161",
+		"name": "VK API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13067200"
+	},
+	"item": [
+		{
+			"name": "Friends Requests",
+			"item": [
+				{
+					"name": "friends.add",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.vk.com/method/friends.add?v=5.133&user_id=215646919&text=Привет, Илья!&access_token=55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6",
+							"protocol": "https",
+							"host": [
+								"api",
+								"vk",
+								"com"
+							],
+							"path": [
+								"method",
+								"friends.add"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "5.133"
+								},
+								{
+									"key": "user_id",
+									"value": "215646919"
+								},
+								{
+									"key": "text",
+									"value": "Привет, Илья!"
+								},
+								{
+									"key": "access_token",
+									"value": "55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "friends.delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.vk.com/method/friends.delete?v=5.133&user_id=356133721&access_token=55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6",
+							"protocol": "https",
+							"host": [
+								"api",
+								"vk",
+								"com"
+							],
+							"path": [
+								"method",
+								"friends.delete"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "5.133"
+								},
+								{
+									"key": "user_id",
+									"value": "356133721"
+								},
+								{
+									"key": "access_token",
+									"value": "55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages Requests",
+			"item": [
+				{
+					"name": "messages.addChatUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.vk.com/method/messages.addChatUser?v=5.133&chat_id=36&user_id=590999945&access_token=55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6",
+							"protocol": "https",
+							"host": [
+								"api",
+								"vk",
+								"com"
+							],
+							"path": [
+								"method",
+								"messages.addChatUser"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "5.133"
+								},
+								{
+									"key": "chat_id",
+									"value": "36"
+								},
+								{
+									"key": "user_id",
+									"value": "590999945"
+								},
+								{
+									"key": "access_token",
+									"value": "55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "messages.removeChatUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.vk.com/method/messages.removeChatUser?v=5.133&chat_id=36&user_id=590999945&access_token=55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6",
+							"protocol": "https",
+							"host": [
+								"api",
+								"vk",
+								"com"
+							],
+							"path": [
+								"method",
+								"messages.removeChatUser"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "5.133"
+								},
+								{
+									"key": "chat_id",
+									"value": "36"
+								},
+								{
+									"key": "user_id",
+									"value": "590999945"
+								},
+								{
+									"key": "access_token",
+									"value": "55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "messages.createChat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.vk.com/method/messages.createChat?v=5.133&title=Test2&access_token=55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6",
+							"protocol": "https",
+							"host": [
+								"api",
+								"vk",
+								"com"
+							],
+							"path": [
+								"method",
+								"messages.createChat"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "5.133"
+								},
+								{
+									"key": "user_ids",
+									"value": "356133721",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Test2"
+								},
+								{
+									"key": "access_token",
+									"value": "55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "messages.deleteConversation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.vk.com/method/messages.deleteConversation?v=5.133&peer_id=2000000036&access_token=55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6",
+							"protocol": "https",
+							"host": [
+								"api",
+								"vk",
+								"com"
+							],
+							"path": [
+								"method",
+								"messages.deleteConversation"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "5.133"
+								},
+								{
+									"key": "user_id",
+									"value": "36518490",
+									"disabled": true
+								},
+								{
+									"key": "peer_id",
+									"value": "2000000036"
+								},
+								{
+									"key": "access_token",
+									"value": "55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "messages.delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.vk.com/method/messages.delete?v=5.133&message_ids=592128, 592127&delete_for_all=1&access_token=55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6&peer_id=2000000037",
+							"protocol": "https",
+							"host": [
+								"api",
+								"vk",
+								"com"
+							],
+							"path": [
+								"method",
+								"messages.delete"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "5.133"
+								},
+								{
+									"key": "message_ids",
+									"value": "592128, 592127"
+								},
+								{
+									"key": "group_id",
+									"value": "37",
+									"disabled": true
+								},
+								{
+									"key": "delete_for_all",
+									"value": "1"
+								},
+								{
+									"key": "access_token",
+									"value": "55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6"
+								},
+								{
+									"key": "peer_id",
+									"value": "2000000037"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "messages.search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.vk.com/method/messages.search?v=5.133&access_token=55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6&peer_id=220276015&date=22052022",
+							"protocol": "https",
+							"host": [
+								"api",
+								"vk",
+								"com"
+							],
+							"path": [
+								"method",
+								"messages.search"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "5.133"
+								},
+								{
+									"key": "q",
+									"value": "lil",
+									"disabled": true
+								},
+								{
+									"key": "count",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "group_id",
+									"value": "37",
+									"disabled": true
+								},
+								{
+									"key": "access_token",
+									"value": "55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6"
+								},
+								{
+									"key": "peer_id",
+									"value": "220276015"
+								},
+								{
+									"key": "date",
+									"value": "22052022"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "messages.send",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.vk.com/method/messages.send?v=5.90&access_token=55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6&peer_id=220276015&message=Ghbdt&random_id=54658797",
+							"protocol": "https",
+							"host": [
+								"api",
+								"vk",
+								"com"
+							],
+							"path": [
+								"method",
+								"messages.send"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "5.90"
+								},
+								{
+									"key": "access_token",
+									"value": "55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6"
+								},
+								{
+									"key": "peer_id",
+									"value": "220276015"
+								},
+								{
+									"key": "message",
+									"value": "Ghbdt"
+								},
+								{
+									"key": "random_id",
+									"value": "54658797"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users.get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.vk.com/method/users.get?v=5.133&user_ids=220276015&access_token=55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6",
+					"protocol": "https",
+					"host": [
+						"api",
+						"vk",
+						"com"
+					],
+					"path": [
+						"method",
+						"users.get"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "5.133"
+						},
+						{
+							"key": "user_ids",
+							"value": "220276015"
+						},
+						{
+							"key": "access_token",
+							"value": "55b0130bf1a41c0acab3ac09bfd35aa1d2d77542aaaf951996159d9538519ff16821efc6c62c180ba15e6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
