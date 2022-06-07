@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "ead89dec-0bd3-4fb9-970a-8e78cfc528ee",
+		"name": "Alquran",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13067200"
+	},
+	"item": [
+		{
+			"name": "Additional",
+			"item": [
+				{
+					"name": "Get 4:11 Translation on Azerbaijani",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"String check\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.text).to.eql(\"Allah övladlarınız haqqında sizə tövsiyə buyurur ki, oğula iki qız hissəsi qədər pay düşür. Əgər (ölən şəxsin) qızlarının sayı ikidən artıqdırsa, mirasın üçdə iki hissəsi onlara çatır. Əgər təkcə bir nəfər qızdırsa, mirasın yarısı onundur. Övladı olduğu təqdirdə vəfat edənin ata və anasının hər birinə mirasın altıda bir hissəsi verilir. Əgər onun övladı olmayıb, varisi yalnız ata və anadan ibarətdirsə, (malın) üçdə bir hissəsi anaya aiddir. (Qalan hissə tamamilə ataya çatır). Əgər ölmüş şəxsin qardaşları və bacıları varsa, ananın hissəsi altıda birdir. (Yerdə qalan hissəsi yenə atanın payına düşür). Bu bölgü ölən şəxsin vəsiyyəti yerinə yetirildikdən və ya borcu ödənildikdən sonra aparılır. Valideynlərinizdən və övladlarınızdan hansı birinin (xeyir və) mənfəət cəhətdən sizə daha yaxın olduğunu bilmədiyiniz üçün bu (bölgü) Allah tərəfindən müəyyən edilmişdir. Həqiqətən, Allah (hər şeyi) biləndir, hikmət sahibidir!\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ayah/4:11/az.mammadaliyev",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ayah",
+								"4:11",
+								"az.mammadaliyev"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an ayah of 87th Surah",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"sayah_number\", pm.iterationData.get(\"sayah_number\"));"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var JsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check ayah number\", function(){\r",
+									"    pm.expect(JsonData.data.number).to.eql(pm.iterationData.get(\"ayah_number\"));\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Check ayah text\", function(){\r",
+									"    pm.expect(JsonData.data.text).to.eql(pm.iterationData.get(\"ayah_text\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check ayah language\", function(){\r",
+									"    pm.expect(JsonData.data.edition.language).to.eql(pm.iterationData.get(\"ayah_language\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check juz number\", function(){\r",
+									"    pm.expect(JsonData.data.juz).to.eql(pm.iterationData.get(\"juz_number\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ayah/87:{{sayah_number}}/en.ahmedali",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ayah",
+								"87:{{sayah_number}}",
+								"en.ahmedali"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all editions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/edition/language/ru",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"edition",
+								"language",
+								"ru"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Homework",
+			"item": [
+				{
+					"name": "Get Quran on Azerbaijani",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var JsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check translation\", function(){\r",
+									"    pm.expect(JsonData.data.edition.language).to.eql(\"az\");\r",
+									"    //pm.expect(JsonData.data.edition.text).to.eql(\"az\");\r",
+									"    //Как взять один аят и проверить его?\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check translator name\", function(){\r",
+									"    pm.expect(JsonData.data.edition.identifier).to.eql(\"az.mammadaliyev\");\r",
+									"    pm.expect(JsonData.data.edition.englishName).to.eql(\"Vasim Mammadaliyev and Ziya Bunyadov\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/quran/az.mammadaliyev",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"quran",
+								"az.mammadaliyev"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get 87 Surah Audio",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var JsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Check language\", function(){\r",
+									"    pm.expect(JsonData.data.edition.language).to.eql(\"ar\");\r",
+									"});\r",
+									"pm.test(\"Check format\", function(){\r",
+									"    pm.expect(JsonData.data.edition.format).to.eql(\"audio\");\r",
+									"});\r",
+									"pm.test(\"Check numberOfAyahs\", function(){\r",
+									"    pm.expect(JsonData.data.numberOfAyahs).to.eql(19);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/surah/87/ar.alafasy",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"surah",
+								"87",
+								"ar.alafasy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get 87:1 Translation On Russian",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var JsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check ayah number\", function(){\r",
+									"    pm.expect(JsonData.data.number).to.eql(5949);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Check ayah text\", function(){\r",
+									"    pm.expect(JsonData.data.text).to.eql(\"Славь имя Господа твоего Всевышнего,\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check ayah language\", function(){\r",
+									"    pm.expect(JsonData.data.edition.language).to.eql(\"ru\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check juz number\", function(){\r",
+									"    pm.expect(JsonData.data.juz).to.eql(30);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//pm.environment.set(\"sayah_number\", pm.iterationData.get(\"sayah_number\"));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ayah/87:1/ru.kuliev",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ayah",
+								"87:1",
+								"ru.kuliev"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
